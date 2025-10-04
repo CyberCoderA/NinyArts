@@ -1,16 +1,13 @@
+import { useState } from 'react'
 import './App.css'
 import NavigationBar from './components/NavigationBar'
-import fb_logo from './images/fb_logo.png' 
-import ig_logo from './images/ig_logo.png' 
-import email_logo from './images/email_logo.png' 
-import map from './images/map.png' 
-import location from './images/location.png' 
 
 function About() {
+  const [isMenuOpen, setMenuStatus] = useState(false);
 
     return (
       <div className='bg-white h-screen w-full flex flex-col items-center'>
-          <NavigationBar/>
+          <NavigationBar isMenuOpen={isMenuOpen} setMenuStatus={setMenuStatus}/>
           <div className='h-full flex flex-col justify-around items-center gap-10 p-10'>
             <div className='flex flex-col gap-2'>
                 <h1 className='font-bold text-center text-5xl text-primary'>

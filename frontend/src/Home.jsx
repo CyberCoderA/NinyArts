@@ -5,16 +5,17 @@ import pic1 from './images/bg_pic1.png'
 import pic2 from './images/bg_pic2.png'
 
 function Home() {
+  const [isMenuOpen, setMenuStatus] = useState(false);
 
   return (
     <div className='bg-gradient-to-tl from-lime-200 to-primary h-screen w-full flex flex-col items-center'>
-        <NavigationBar/>
+        <NavigationBar isMenuOpen={isMenuOpen} setMenuStatus={setMenuStatus}/>
         <div className='h-full flex flex-col justify-center items-center'>
             <img src={pic1} alt="pic1" className='absolute bottom-0 right-0 h-80'/>
             <img src={pic2} alt="pic1" className='absolute top-28 left-0 h-40'/>
 
             <h1 className='font-bold italic text-center text-5xl text-white mb-10 z-3'>
-                “Stitch the tapestry of your heart.”
+                "Stitch the tapestry of your heart."
             </h1>
 
             <p className='font-light italic text-center text-white text-xl w-90 mb-10 z-3'>
