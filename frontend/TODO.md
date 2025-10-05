@@ -1,3 +1,0 @@
-- [x] Update Shop.jsx to compute cartItems and pass to CartPopup
-- [x] Modify CartPopup.jsx to receive cartItems prop and render RectangleItemCart for each item
-- [x] Update RectangleItemCart.jsx to display title, price, image, and handle removal
