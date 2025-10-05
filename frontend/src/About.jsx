@@ -19,17 +19,17 @@ function About() {
                 </p>
             </div>
 
-            <div className='flex flex-col gap-5'>
-                <div className='w-80 h-100 bg-gray-400 rounded-4xl'></div>
-                <p className='font-extralight italic text-center text-sm'>"Creating wonderful creations that tugs the strings of your heart" - Niñalyn Perez</p>
+            <div className='w-full flex flex-col gap-5 justify-center items-center'>
+                <div className='w-80 h-100 bg-gray-400 rounded-4xl md:w-120 md:h-140 lg:w-190 lg:h-200'></div>
+                <p className='font-extralight italic text-center text-sm md:text-md lg:text-2xl'>"Creating wonderful creations that tugs the strings of your heart" - Niñalyn Perez</p>
             </div>
 
-            <div className='w-full flex flex-col justify-start'>
-                <h1 className='font-bold text-start text-xl text-primary'>
+            <div className='w-full flex flex-col justify-start gap-2'>
+                <h1 className='font-bold text-start text-xl lg:text-4xl text-primary'>
                     Providing comfort and quality
                 </h1>
 
-                <p className='font-light text-sm mb-10'>
+                <p className='font-light text-sm lg:text-xl mb-10'>
                     Welcome to Niñarts — Where we stitch the tapestry of your heart.
                     <br />
                     <br />

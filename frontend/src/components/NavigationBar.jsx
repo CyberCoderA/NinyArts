@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import logo from '../images/logo.png'
 import hamburger from '../images/hamburger.png'
 import close from '../images/close.png'
 
 function NavigationBar({ isMenuOpen, setMenuStatus }) {
   const [localMenuOpen, setLocalMenuStatus] = useState(false);
+  const location = useLocation();
 
   const menuOpen = isMenuOpen !== undefined ? isMenuOpen : localMenuOpen;
   const toggleMenu = setMenuStatus || setLocalMenuStatus;
@@ -13,6 +14,10 @@ function NavigationBar({ isMenuOpen, setMenuStatus }) {
   const validateMenuStatus = () => {
     toggleMenu(!menuOpen);
   }
+
+  const getLinkClass = (path) => {
+    return location.pathname === path ? 'bg-primary text-white px-4 py-2 rounded-xl w-30 h-15 flex justify-center items-center' : 'text-primary';
+  };
 
   return !menuOpen ? (
     <div className='w-full h-30 flex flex-row items-center justify-between bg-white shadow-xl p-5'>
@@ -31,10 +36,10 @@ function NavigationBar({ isMenuOpen, setMenuStatus }) {
         <h1 className='text-3xl text-primary font-bold'>NiñArts</h1>
       </div>
       <nav className='flex flex-col items-center gap-8'>
-        <Link to='/' onClick={validateMenuStatus} className='text-primary font-bold hover:text-accent text-2xl'>Home</Link>
-        <Link to='/about' onClick={validateMenuStatus} className='text-primary font-bold hover:text-accent text-2xl'>About</Link>
-        <Link to='/contact' onClick={validateMenuStatus} className='text-primary font-bold hover:text-accent text-2xl'>Contact</Link>
-        <Link to='/shop' onClick={validateMenuStatus} className='text-primary font-bold hover:text-accent text-2xl'>Shop</Link>
+        <Link to='/' onClick={validateMenuStatus} className={`font-bold hover:text-secondary   text-2xl ${getLinkClass('/')}`}>Home</Link>
+        <Link to='/about' onClick={validateMenuStatus} className={`font-bold hover:text-secondary  text-2xl ${getLinkClass('/about')}`}>About</Link>
+        <Link to='/contact' onClick={validateMenuStatus} className={`font-bold hover:text-secondary  text-2xl ${getLinkClass('/contact')}`}>Contact</Link>
+        <Link to='/shop' onClick={validateMenuStatus} className={`font-bold hover:text-secondary   text-2xl ${getLinkClass('/shop')}`}>Shop</Link>
       </nav>
     </div>
   );

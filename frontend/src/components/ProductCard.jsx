@@ -1,12 +1,12 @@
-import { FaHeart, FaShoppingCart } from "react-icons/fa";
+import { FaHeart, FaShoppingCart, FaTimes } from "react-icons/fa";
 
-function ProductCard({ image, price, title, rating }) {
+function ProductCard({ image, price, title, added, onToggleCart }) {
   return (
     <div className="max-w-xs rounded-lg overflow-hidden shadow-lg bg-primary">
       {/* Image */}
       <img
         src={image}
-        alt="Key Chain"
+        alt="Ite,"
         className="w-full"
       />
       <div className="p-3 text-white">
@@ -17,14 +17,15 @@ function ProductCard({ image, price, title, rating }) {
         </div>
 
         {/* Likes and Button */}
-        <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-1">
-            <FaHeart className="text-white text-xl" />
-            <span className="text-lg">{rating}</span>
-          </div>
-          <button className="flex items-center space-x-2 bg-white text-primary px-4 py-2 rounded-md hover:cursor-pointer hover:bg-gray-100 transition">
-            <FaShoppingCart />
-            <span>Add to Cart</span>
+        <div className="flex justify-end items-center">
+          <button
+            onClick={onToggleCart}
+            className={`flex items-center space-x-2 px-4 py-2 rounded-md hover:cursor-pointer transition ${
+              added ? 'bg-primary text-white border border-white' : 'bg-white text-primary hover:bg-gray-100'
+            }`}
+          >
+            {added ? <FaTimes /> : <FaShoppingCart />}
+            <span>{added ? 'Remove from Cart' : 'Add to Cart'}</span>
           </button>
         </div>
       </div>
