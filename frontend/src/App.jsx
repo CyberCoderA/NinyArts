@@ -3,6 +3,7 @@ import Home from './Home';
 import Contact from './Contact';
 import About from './About';
 import Shop from './Shop';
+import Login from './Login';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/shop' element={<Shop/>} />
+        <Route path='/login' element={<Login/>} />
       </Routes>
     </BrowserRouter>
   )

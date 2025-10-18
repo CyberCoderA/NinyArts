@@ -20,13 +20,13 @@ function NavigationBar({ isMenuOpen, setMenuStatus }) {
   };
 
   return !menuOpen ? (
-    <div className='w-full h-30 flex flex-row items-center justify-between bg-white shadow-xl p-5'>
+    <div className='w-full h-30 flex flex-row items-center justify-between bg-white shadow-xl p-2 md:p-5'>
       <div className='flex flex-row items-center justify-between w-35'>
-        <img src={logo} alt="logo"/>
-        <h1 className='text-3xl text-primary font-bold'>NiñArts</h1>
+        <img src={logo} className='h-15 md:h-20' alt="logo"/>
+        <h1 className='text-2xl text-primary font-bold md:text-4xl'>NiñArts</h1>
       </div>
 
-      <img src={hamburger} onClick={validateMenuStatus} alt="menu" className='cursor-pointer' />
+      <img src={hamburger} onClick={validateMenuStatus} alt="menu" className='hover:cursor-pointer' />
     </div>
   ) : (
     <div className='fixed inset-0 bg-white z-50 flex flex-col items-center justify-center'>
@@ -40,6 +40,7 @@ function NavigationBar({ isMenuOpen, setMenuStatus }) {
         <Link to='/about' onClick={validateMenuStatus} className={`font-bold hover:text-secondary  text-2xl ${getLinkClass('/about')}`}>About</Link>
         <Link to='/contact' onClick={validateMenuStatus} className={`font-bold hover:text-secondary  text-2xl ${getLinkClass('/contact')}`}>Contact</Link>
         <Link to='/shop' onClick={validateMenuStatus} className={`font-bold hover:text-secondary   text-2xl ${getLinkClass('/shop')}`}>Shop</Link>
+        <Link to='/login' onClick={validateMenuStatus} className={`font-bold hover:text-secondary   text-2xl ${getLinkClass('/login')}`}>Login</Link>
       </nav>
     </div>
   );
