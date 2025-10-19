@@ -6,9 +6,9 @@ function ButtonRectangular({ title, icon }) {
   }
 
   return (
-    <button className="flex items-center justify-center gap-3 bg-primary border-3 border-white rounded-xl w-30 h-15 p-5 z-3 hover:cursor-pointer lg:w-60 lg:h-20 lg:gap-5">
+    <button className="flex items-center justify-center gap-3 text-xl text-white lg:text-3xl transition duration-300 ease-in-out bg-primary border-3 border-white rounded-xl w-30 h-15 p-5 z-3 hover:cursor-pointer hover:bg-white hover:text-primary hover:border-primary lg:w-60 lg:h-20 lg:gap-5">
       {renderIcon()}
-      <h1 className="font-bold text-center text-xl text-white lg:text-3xl">
+      <h1 className="font-bold text-center">
         {title}
       </h1>
     </button>

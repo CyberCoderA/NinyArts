@@ -4,6 +4,7 @@ import Contact from './Contact';
 import About from './About';
 import Shop from './Shop';
 import Login from './Login';
+import SignUp from './SignUp';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/about' element={<About/>} />
         <Route path='/shop' element={<Shop/>} />
         <Route path='/login' element={<Login/>} />
+        <Route path='/signup' element={<SignUp/>} />
       </Routes>
     </BrowserRouter>
   )

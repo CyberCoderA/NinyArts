@@ -26,8 +26,8 @@ function Home() {
             </p>
 
             <div className='w-full flex justify-center z-3'>
-              <Link to={'/shop'}>
-                <ButtonRectangular title="Shop" icon={ShopCart} buttonType="wide" />
+              <Link to={'/login'}>
+                <ButtonRectangular title="Get Started" buttonType="wide" />
               </Link>
             </div>
         </div>

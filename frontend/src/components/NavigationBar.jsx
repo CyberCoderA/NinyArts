@@ -35,12 +35,13 @@ function NavigationBar({ isMenuOpen, setMenuStatus }) {
         <img src={logo} alt="logo" className='h-10 mr-3' />
         <h1 className='text-3xl text-primary font-bold'>NiñArts</h1>
       </div>
-      <nav className='flex flex-col items-center gap-8'>
-        <Link to='/' onClick={validateMenuStatus} className={`font-bold hover:text-secondary   text-2xl ${getLinkClass('/')}`}>Home</Link>
-        <Link to='/about' onClick={validateMenuStatus} className={`font-bold hover:text-secondary  text-2xl ${getLinkClass('/about')}`}>About</Link>
-        <Link to='/contact' onClick={validateMenuStatus} className={`font-bold hover:text-secondary  text-2xl ${getLinkClass('/contact')}`}>Contact</Link>
-        <Link to='/shop' onClick={validateMenuStatus} className={`font-bold hover:text-secondary   text-2xl ${getLinkClass('/shop')}`}>Shop</Link>
-        <Link to='/login' onClick={validateMenuStatus} className={`font-bold hover:text-secondary   text-2xl ${getLinkClass('/login')}`}>Login</Link>
+      <nav className='flex flex-col items-center gap-6'>
+        <Link to='/' onClick={validateMenuStatus} className={`font-bold hover:text-secondary text-2xl ${getLinkClass('/')}`}>Home</Link>
+        <Link to='/about' onClick={validateMenuStatus} className={`font-bold hover:text-secondary text-2xl ${getLinkClass('/about')}`}>About</Link>
+        <Link to='/contact' onClick={validateMenuStatus} className={`font-bold hover:text-secondary text-2xl ${getLinkClass('/contact')}`}>Contact</Link>
+        <Link to='/shop' onClick={validateMenuStatus} className={`font-bold hover:text-secondary text-2xl ${getLinkClass('/shop')}`}>Shop</Link>
+        <Link to='/login' onClick={validateMenuStatus} className={`font-bold hover:text-secondary text-2xl ${getLinkClass('/login')}`}>Login</Link>
+        <Link to='/signup' onClick={validateMenuStatus} className={`font-bold hover:text-secondary text-2xl ${getLinkClass('/signup')}`}>Signup</Link>
       </nav>
     </div>
   );
