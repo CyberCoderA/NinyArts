@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import NavigationBar from './components/NavigationBar'
+import Portrait from './images/about_img.jpg'
 
 function About() {
   const [isMenuOpen, setMenuStatus] = useState(false);
@@ -20,8 +21,9 @@ function About() {
             </div>
 
             <div className='w-full flex flex-col gap-5 justify-center items-center'>
-                <div className='w-80 h-100 bg-gray-400 rounded-4xl md:w-120 md:h-140 lg:w-190 lg:h-200'></div>
-                <p className='font-extralight italic text-center text-sm md:text-md lg:text-2xl'>"Creating wonderful creations that tugs the strings of your heart" - Niñalyn Perez</p>
+                <img src={Portrait} alt="portrait" className='w-80 h-100 bg-gray-400 rounded-4xl md:w-120 md:h-140 lg:w-190 lg:h-200' />
+                <p className='font-extralight italic text-center text-sm md:text-md lg:text-2xl'>"Creating wonderful creations that tugs the strings of your heart" 
+                    - Niñalyn Perez</p>
             </div>
 
             <div className='w-full flex flex-col justify-start gap-2'>
@@ -33,7 +35,9 @@ function About() {
                     Welcome to Niñarts — Where we stitch the tapestry of your heart.
                     <br />
                     <br />
-                    At Niñarts, we believe in the magic of handcrafted items — from cozy wearables and whimsical toys to elegant home décor. Each product is thoughtfully designed and meticulously crocheted, combining traditional techniques with modern flair. Whether you're looking for a unique gift, a custom creation, or something to brighten your space, Niñarts offers pieces that are made to be cherished.
+                    At Niñarts, we believe in the magic of handcrafted items — from cozy wearables and whimsical toys to elegant home décor. 
+                    Each product is thoughtfully designed and meticulously crocheted, combining traditional techniques with modern flair. 
+                    Whether you're looking for a unique gift, a custom creation, or something to brighten your space, Niñarts offers pieces that are made to be cherished.
                 </p>
             </div>
           </div>

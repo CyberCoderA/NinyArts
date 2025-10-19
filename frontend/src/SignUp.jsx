@@ -35,10 +35,13 @@ function Signup() {
                 <div className="flex flex-col gap-1 w-full lg:gap-10">
                     <HollowTextfield title="Email" placeholder="Enter email here" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                     <HollowTextfield title="Password" placeholder="Enter password here" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <HollowTextfield title="Confirm Password" placeholder="Retype your password" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                    <HollowTextfield title="Confirm Password" placeholder="Retype your password" type="password" value={confirmPassword} onChange={(e) => 
+                        setConfirmPassword(e.target.value)} />
                 </div>
                 <div className="flex flex-col gap-2 w-full lg:gap-5">
-                    <button onClick={handleSignup} className="bg-primary text-white h-12 w-full rounded-xl transition duration-300 ease-in-out md:h-16 hover:cursor-pointer hover:text-primary hover:bg-white  hover:border-primary hover:border-1">
+                    <button onClick={handleSignup} 
+                    className="bg-primary text-white h-12 w-full rounded-xl transition duration-300 ease-in-out md:h-16 hover:cursor-pointer
+                     hover:text-primary hover:bg-white  hover:border-primary hover:border-1">
                         <h1 className="font-bold text-center text-2xl md:text-2xl">
                             Signup
                         </h1>

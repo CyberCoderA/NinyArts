@@ -12,6 +12,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.use((req, res, next) => {
+    console.log(req.path, req.method);
+    next();
+})
+
 app.use('/users', userRouter);
 
 // Connect to database
@@ -24,3 +29,5 @@ mongoose.connect(process.env.MONGODB_URI)
   .catch((err) => {
     console.log(err);
   });
+
+  export default server
