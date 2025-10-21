@@ -16,7 +16,7 @@ function Signup() {
             return;
         }
         try {
-            const response = await axios.post('http://localhost:3000/users/signup', {email, password});
+            // const response = await axios.post('http://localhost:3000/users/signup', {email, password});
 
             // if (response.status === 200) {
             //     alert(response.data.message);
