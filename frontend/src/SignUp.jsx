@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import emailjs from '@emailjs/browser';
 import NavigationBar from './components/NavigationBar'
 import HollowTextfield from "./components/HollowTextfield";
 
@@ -17,13 +18,23 @@ function Signup() {
         try {
             const response = await axios.post('http://localhost:3000/users/signup', {email, password});
 
-            if (response.status == 200) {
+            if (response.status === 200) {
                 alert(response.data.message);
+
+                // Send welcome email after successful signup
+                await emailjs.send('service_szdov3u', 'template_hr5dj3i', { email }, 'pCvefZehxq1-eLPdP');
+                alert('Welcome email sent successfully!');
             }
 
-            alert(response.data.message);
+            // Send welcome email after successful signup
+            await emailjs.send('service_szdov3u', 'template_hr5dj3i', { email }, 'pCvefZehxq1-eLPdP');
+            alert('Welcome email sent successfully!');
         } catch (error) {
-            alert(error.response?.data?.message || 'An error occurred during login');
+            if (error.response) {
+                alert(error.response.data?.message || 'An error occurred during signup');
+            } else {
+                alert('Failed to send email: ' + error.text);
+            }
         }
     };
 
