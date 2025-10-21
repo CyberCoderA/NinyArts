@@ -18,13 +18,13 @@ function Signup() {
         try {
             const response = await axios.post('http://localhost:3000/users/signup', {email, password});
 
-            if (response.status === 200) {
-                alert(response.data.message);
+            // if (response.status === 200) {
+            //     alert(response.data.message);
 
-                // Send welcome email after successful signup
-                await emailjs.send('service_szdov3u', 'template_hr5dj3i', { email }, 'pCvefZehxq1-eLPdP');
-                alert('Welcome email sent successfully!');
-            }
+            //     // Send welcome email after successful signup
+            //     await emailjs.send('service_szdov3u', 'template_hr5dj3i', { email }, 'pCvefZehxq1-eLPdP');
+            //     alert('Welcome email sent successfully!');
+            // }
 
             // Send welcome email after successful signup
             await emailjs.send('service_szdov3u', 'template_hr5dj3i', { email }, 'pCvefZehxq1-eLPdP');
